@@ -8,11 +8,14 @@ build: module.o
 test: test-runner
 
 module.o: module.c module.h
-	gcc -c -o $@ $^ -I.
+	gcc -c $< -I. -o $@
 
 main.o: main.c module.h
-	gcc -c -o $@ $^ -I.
+	gcc -c $< -I. -o $@
 
 test-runner: main.o module.o
-	gcc -o $@ $^
+	gcc $^ -o $@
 
+.phony: clean
+clean:
+	rm *.o test-runner
