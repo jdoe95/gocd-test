@@ -5,7 +5,7 @@ int main(void)
 {
   int c = addition(10, 1);
 
-  if (c != 11)
+  if (c != 10)
 	{
 	  fputs("test failed", stderr);
 	  return -1;
