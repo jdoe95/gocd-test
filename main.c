@@ -9,7 +9,7 @@
 
 int main(void)
 {
-  int c = addition(10, 1);
+  int c = addition(10, 2);
   FILE* file = fopen("test-output", "w+c");
   if (file == NULL) {
 	strerror(errno);
